@@ -25,7 +25,7 @@ int str_len(const char *s)
  */
 void handle_percent(int *printed_chars)
 {
-	write(1, "%", 1);
+	_putchar('%');
 	(*printed_chars)++;
 }
 
