@@ -4,6 +4,15 @@
 #include "stdlib.h"
 #include "stdarg.h"
 
-int _printf(const char *format, ...)
+/** typedef struct formatCheck
+ *  {
+ *     char opt;
+ *     char (*opt_func)(int, int);
+ * }checkForm;
+ */
+
+int _putchar(char c);
+int str_len (const char *s);
+int _printf(const char *format, ...);
 
 #endif
