@@ -20,6 +20,11 @@ int str_len(const char *s)
 	return (len);
 }
 
+void handle_percent(int *printed_chars) {
+    write(1, "%", 1);
+    (*printed_chars)++;
+}
+
 /**
  * _printf - printf function
  * @format: format specified
@@ -49,15 +54,21 @@ int _printf(const char *format, ...)
 		{
 			format++;
 
-
-			for (i = 0; i < 2; i++)
+			if (*format == '%')
 			{
-				if (*format == formatchk[i].opt)
+				handle_percent(&charlength);
+			}else
+			{
+				for (i = 0; i < 2; i++)
 				{
-					formatchk[i].opt_func(arguments, &charlength);
-					break;
+					if (*format == formatchk[i].opt)
+					{
+						formatchk[i].opt_func(arguments, &charlength);
+						break;
+					}
 				}
 			}
+			
 
 		}
 		else

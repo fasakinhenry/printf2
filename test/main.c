@@ -14,5 +14,8 @@ int main(void)
 
     _printf("String:[%s]\n", "hello world");
     printf("String:[%s]\n", "Hello world");
+
+     _printf("Percent:[%%]\n");
+    printf("Percent:[%%]\n");
     return (0);
 }
