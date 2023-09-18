@@ -27,6 +27,12 @@ int str_len (const char *s)
 int _printf(const char *format, ...)
 {
     int charlength = 0;
+            checkForm formatchk[] = {
+                {'c', print_char},
+                {'s', print_string}
+            };
+            int i;
+
     va_list arguments;
     va_start(arguments, format);
 
@@ -37,33 +43,16 @@ int _printf(const char *format, ...)
         {
             format++;
 
-            if (*format == 'c')
+
+            for (i = 0; i < 2; i++)
             {
-            char character = va_arg(arguments, int);
-            _putchar(character);
-            charlength++;
-            }
-            else if (*format == 's')
-            {
-                char *str = va_arg(arguments, char *);
-                if (str != NULL)
+                if (*format == formatchk[i].opt)
                 {
-                    int len = str_len(str);
-                    write(1, str, len);
-                    charlength += len;
+                    formatchk[i].opt_func(arguments, &charlength);
+                    break;
                 }
-                else
-                {
-                    write(1, "null", 4);
-                    charlength = 4;
-                }
-            
             }
-            else if (*format == '%')
-            {
-                _putchar('%');
-                charlength++;
-            }
+ 
         }
         else
         {
