@@ -29,7 +29,7 @@ void handle_percent(int *printed_chars)
 	(*printed_chars)++;
 }
 
-FormatHandler *get_format_handlers()
+checkForm *get_format_handlers()
 {
 	static checkForm formatchk[] = {
 		{'c', print_char},
@@ -66,7 +66,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				FormatHandler *formatchk = get_format_handlers();
+				checkForm *formatchk = get_format_handlers();
 
 				for (i = 0; i < 2; i++)
 				{
