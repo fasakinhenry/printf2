@@ -147,7 +147,7 @@ int print_binary(va_list types, char buffer[],
 		int flags, int width, int precision, int size)
 {
 	unsigned int n;
-	double m;
+	unsigned int m;
 	unsigned int i;
 	unsigned int sum;
 	unsigned int a[32];
