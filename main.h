@@ -21,8 +21,8 @@ typedef struct chk
 
 int _putchar(char c);
 int str_len(const char *s);
-void print_char(va_list arguments, int *printed_chars);
-void print_string(va_list arguments, int *printed_chars);
+int print_char(va_list arguments);
+int print_string(va_list arguments);
 int _printf(const char *format, ...);
 
 #endif

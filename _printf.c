@@ -29,14 +29,35 @@ void handle_percent(int *printed_chars)
 	(*printed_chars)++;
 }
 
-checkForm *get_format_handlers()
-{
-	static checkForm formatchk[] = {
-		{'c', print_char},
-		{'s', print_string},
-	};
-	return (formatchk);
-}
+int (*selector(char str))(va_list arg)
+	 { 
+	   if (str == 'c')
+	   {
+	    return &print_char;
+	   }
+	   else if (str == 's')
+	   {
+	     return &print_string;
+	   }
+	return 0;
+	 }
+
+
+int print_number(long num, int count)
+ {
+   if (num < 0)
+   {
+    _putchar('-');
+    count++;
+    num = num * -1;
+   }
+  if (num/10)
+  {
+  count = print_number(num/10, count);
+  }
+  _putchar(num%10 + '0');
+  return (count + 1);
+ }
 
 /**
  * _printf - printf function
@@ -55,33 +76,27 @@ int _printf(const char *format, ...)
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
-	while (*format != '\0')
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (*format == '%')
+		if (format[i] == '%')
 		{
-			format++;
-			if (*format == '%')
+			i++;
+			if (format[i] == '%')
 			{
 				handle_percent(&charlength);
 			} else
 			{
-				checkForm *formatchk = get_format_handlers();
-
-				for (i = 0; i < 2; i++)
+				if (format[i] == 'c' || format[i] == 'd' || format[i] == 's')
 				{
-					if (*format == formatchk[i].opt)
-					{
-						formatchk[i].opt_func(arguments, &charlength);
-					}
+					charlength += selector(format[i])(arguments);
 				}
 			}
 		}
 		else
 		{
-			_putchar(*format);
+			_putchar(format[i]);
 			charlength++;
 		}
-		format++;
 	}
 	va_end(arguments);
 	return (charlength);

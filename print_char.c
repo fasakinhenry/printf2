@@ -7,10 +7,10 @@
  * @printed_chars: counts no of chars
  * Return: number of char printed
  */
-void print_char(va_list arguments, int *printed_chars)
+int print_char(va_list arguments)
 {
-	char character = va_arg(arguments, int);
-
-	_putchar(character);
-	(*printed_chars)++;
+	   int count;
+	   char get_char = va_arg(arguments, int);
+	  count = _putchar(get_char);
+	  return count; 
 }
