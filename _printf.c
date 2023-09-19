@@ -28,36 +28,45 @@ void handle_percent(int *printed_chars)
 	_putchar('%');
 	(*printed_chars)++;
 }
-
+/**
+ * selector - picks function to be run
+ * @str: format
+ * Return: 0
+ */
 int (*selector(char str))(va_list arg)
-	 { 
-	   if (str == 'c')
-	   {
-	    return &print_char;
-	   }
-	   else if (str == 's')
-	   {
-	     return &print_string;
-	   }
-	return 0;
-	 }
+{
+	if (str == 'c')
+	{
+		return (&print_char);
+	}
+	else if (str == 's')
+	{
+		return (&print_string);
+	}
+	return (0);
+}
 
-
+/**
+ * print_number - prints a number
+ * @num: num to be printed
+ * @count: count
+ * Return: num
+ */
 int print_number(long num, int count)
- {
-   if (num < 0)
-   {
-    _putchar('-');
-    count++;
-    num = num * -1;
-   }
-  if (num/10)
-  {
-  count = print_number(num/10, count);
-  }
-  _putchar(num%10 + '0');
-  return (count + 1);
- }
+{
+	if (num < 0)
+	{
+		_putchar('-');
+		count++;
+		num = num * -1;
+	}
+	if (num / 10)
+	{
+		count = print_number(num / 10, count);
+	}
+	_putchar(num % 10 + '0');
+	return (count + 1);
+}
 
 /**
  * _printf - printf function
