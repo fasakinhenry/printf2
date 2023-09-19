@@ -26,7 +26,7 @@ int main(void)
 
     _printf("Test case 2: String: %s\n", "Hello, World!");
 
-    _printf("Test case 3: Percent Sign: %%\n");
+    _printf("Test case 3: Percent Sign: %%%%%%\n");
 
     _printf("Test case 5: NULL String: %s\n", null_string);
     _printf("Test case 4: Multiple Format Specifiers: %s %c %% %c %s\n","Bonjour!", 'B', 'A', "Hi");
