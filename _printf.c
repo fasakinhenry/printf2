@@ -63,8 +63,7 @@ int _printf(const char *format, ...)
 			if (*format == '%')
 			{
 				handle_percent(&charlength);
-			}
-			else
+			} else
 			{
 				checkForm *formatchk = get_format_handlers();
 
