@@ -4,25 +4,24 @@
 
 /**
  * print_string - a function to print out the characters
- * @args: variable value argument
- * @printed_chars: pointer to the formart specifier
+ * @arguments: variable value argument
  *
  * Return: numbers of printed characters || -1
  */
-void print_string(va_list args, int *printed_chars)
+int print_string(va_list arguments)
 {
-	char *str = va_arg(args, char *);
+	int count = 0;
+	char *ptr = va_arg(arguments, char *);
 
-	if (str != NULL)
+	if (ptr == NULL)
 	{
-		int len = str_len(str);
+		ptr = "(null)";
+	}
+	while (*ptr)
+	{
+		count += _putchar(*ptr);
+		ptr++;
+	}
 
-		write(1, str, len);
-		(*printed_chars) += len;
-	}
-	else
-	{
-		write(1, "(null)", 6);
-		(*printed_chars) += 6;
-	}
+	return (count);
 }
