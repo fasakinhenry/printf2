@@ -19,11 +19,23 @@ int str_len(const char *s)
 	}
 	return (len);
 }
-
+/**
+ * handle_percent - print a percent sign
+ * @printed_chars: no of chars
+ */
 void handle_percent(int *printed_chars)
 {
-	write(1, "%", 1);
+	_putchar('%');
 	(*printed_chars)++;
+}
+
+checkForm *get_format_handlers()
+{
+	static checkForm formatchk[] = {
+		{'c', print_char},
+		{'s', print_string},
+	};
+	return (formatchk);
 }
 
 /**
@@ -35,12 +47,7 @@ void handle_percent(int *printed_chars)
 int _printf(const char *format, ...)
 {
 	int charlength = 0;
-	checkForm formatchk[] = {
-		{'c', print_char},
-		{'s', print_string}
-	};
 	int i;
-
 	va_list arguments;
 
 	va_start(arguments, format);
@@ -48,28 +55,26 @@ int _printf(const char *format, ...)
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
-
 	while (*format != '\0')
 	{
 		if (*format == '%')
 		{
 			format++;
-
 			if (*format == '%')
 			{
 				handle_percent(&charlength);
 			} else
 			{
+				checkForm *formatchk = get_format_handlers();
+
 				for (i = 0; i < 2; i++)
 				{
 					if (*format == formatchk[i].opt)
 					{
 						formatchk[i].opt_func(arguments, &charlength);
-						break;
 					}
 				}
 			}
-
 		}
 		else
 		{
@@ -78,7 +83,6 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
-
 	va_end(arguments);
 	return (charlength);
 }

@@ -12,10 +12,11 @@ int main(void)
     _printf("Character:[%c]\n", 'H');
     printf("Character:[%c]\n", 'H');
 
-    _printf("String:[%s]\n", "hello world");
+    _printf("String:[%s]\n", "Hello world");
     printf("String:[%s]\n", "Hello world");
 
      _printf("Percent:[%%]\n");
     printf("Percent:[%%]\n");
+
     return (0);
 }
