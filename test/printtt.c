@@ -99,6 +99,7 @@ int demoprintf(const char *format, ...)
       else
       {
        ncount += _putchar('%');
+       //ncount += _putchar(format[i]);
         continue;
       } 
     }
@@ -114,14 +115,11 @@ return ncount;
 
 int main(void)
 {
-        char str[] = "Hello";
-  
+  int len1 = printf("prog lang: %c %s %c %s\n", 'C', "hello world", 'F', "YO");
+  int len2 = demoprintf("prog lang: %c %s %c %s\n", 'C', "hello world", 'F', "YO");
 
   
- int len1 = printf("my name is %s and i am %d year old, i love %c\n", 
- "Pascal", 16, 'c');
-  int len2 = demoprintf("my name is %s and i am  year old, i love %c\n", 
- "Pascal",'z');
+ 
  printf("%d = %d", len1, len2);
   
 }
