@@ -7,6 +7,7 @@ int main(void)
     char *null_string = NULL;
     int len1;
     int len2;
+    int i = 8.0;
     
     printf("Let's try to printf a simple sentence.\n");
     _printf("Let's try to printf a simple sentence.\n");
@@ -25,7 +26,7 @@ int main(void)
     _printf("Test case 1: Character: %c\n", 'A');
 
     _printf("Test case 2: String: %s\n", "Hello, World!");
-    _printf("Test case 2: String: %d hhh %i\n", len1, len2);
+    _printf("Test case 2: String: %i hhh %i\n", i, len2);
 
     _printf("Test case 3: Percent Sign: %%%%%%\n");
 

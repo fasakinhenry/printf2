@@ -47,6 +47,10 @@ int (*selector(char str))(va_list arg)
 	{
 		return (&print_string);
 	}
+	else if (str == 'i')
+	{
+		return (&print_int);
+	}
 	return (0);
 }
 
