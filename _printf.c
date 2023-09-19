@@ -39,33 +39,15 @@ int (*selector(char str))(va_list arg)
 	{
 		return (&print_char);
 	}
+	else if (str == 'd')
+	{
+		return (&print_decimal);
+	}
 	else if (str == 's')
 	{
 		return (&print_string);
 	}
 	return (0);
-}
-
-/**
- * print_number - prints a number
- * @num: num to be printed
- * @count: count
- * Return: num
- */
-int print_number(long num, int count)
-{
-	if (num < 0)
-	{
-		_putchar('-');
-		count++;
-		num = num * -1;
-	}
-	if (num / 10)
-	{
-		count = print_number(num / 10, count);
-	}
-	_putchar(num % 10 + '0');
-	return (count + 1);
 }
 
 /**

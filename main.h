@@ -20,9 +20,12 @@ typedef struct chk
 } checkForm;
 
 int _putchar(char c);
+int print_number(long num, int count);
 int str_len(const char *s);
 int print_char(va_list arguments);
 int print_string(va_list arguments);
+int print_decimal(va_list arguments);
+int print_int(va_list arguments);
 int _printf(const char *format, ...);
 
 #endif

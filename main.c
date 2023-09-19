@@ -25,6 +25,7 @@ int main(void)
     _printf("Test case 1: Character: %c\n", 'A');
 
     _printf("Test case 2: String: %s\n", "Hello, World!");
+    _printf("Test case 2: String: %d hhh %i\n", len1, len2);
 
     _printf("Test case 3: Percent Sign: %%%%%%\n");
 
