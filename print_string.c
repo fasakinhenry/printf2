@@ -9,9 +9,9 @@
  *
  * Return: numbers of printed characters || -1
  */
-void print_string(va_list args, int *printed_chars)
+void print_string(va_list arguments, int *printed_chars)
 {
-	char *str = va_arg(args, char *);
+	char *str = va_arg(arguments, char *);
 
 	if (str != NULL)
 	{

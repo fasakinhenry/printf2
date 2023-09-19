@@ -1,8 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include "stdlib.h"
-#include "stdarg.h"
+#include <stdlib.h>
+#include <stdarg.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
  * struct chk - This struct will be used to filter which print
@@ -14,7 +16,7 @@
 typedef struct chk
 {
 	char opt;
-	void (*opt_func)(va_list args, int *printed_chars);
+	void (*opt_func)(va_list arguments, int *printed_chars);
 } checkForm;
 
 int _putchar(char c);
