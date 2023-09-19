@@ -20,9 +20,10 @@ int str_len(const char *s)
 	return (len);
 }
 
-void handle_percent(int *printed_chars) {
-    write(1, "%", 1);
-    (*printed_chars)++;
+void handle_percent(int *printed_chars)
+{
+	write(1, "%", 1);
+	(*printed_chars)++;
 }
 
 /**
@@ -57,7 +58,7 @@ int _printf(const char *format, ...)
 			if (*format == '%')
 			{
 				handle_percent(&charlength);
-			}else
+			} else
 			{
 				for (i = 0; i < 2; i++)
 				{
@@ -68,7 +69,6 @@ int _printf(const char *format, ...)
 					}
 				}
 			}
-			
 
 		}
 		else
