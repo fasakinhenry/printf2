@@ -114,20 +114,24 @@ int width, int prec, int length, char padd, char extra_c)
 		buffer[i] = '\0';
 		/* Asign extra char to left of buffer */
 		if (flags & F_MINUS && padd == ' ')
+		{
 			if (extra_c)
 				buffer[--ind] = extra_c;
 			return (write(1, &buffer[ind], length) + write(1,
 			&buffer[1], i - 1)); /* extra char to left of buff */
-		else if (!(flags & F_MINUS) && padd == ' ')
+		} else if (!(flags & F_MINUS) && padd == ' ')
+		{
 			if (extra_c)
 				buffer[--ind] = extra_c;
 			return (write(1, &buffer[1], i - 1) + write(1,
 			&buffer[ind], length)); /* extra char to left of padd */
-		else if (!(flags & F_MINUS) && padd == '0')
+		} else if (!(flags & F_MINUS) && padd == '0')
+		{
 			if (extra_c)
 				buffer[--padd_start] = extra_c;
 			return (write(1, &buffer[padd_start], i - padd_start) +
 			write(1, &buffer[ind], length - (1 - padd_start)));
+		}
 	}
 	if (extra_c)
 		buffer[--ind] = extra_c;
