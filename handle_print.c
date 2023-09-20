@@ -9,7 +9,7 @@
  * @flags: gets all flags
  * @width: gets the width
  * @precision: get prscn
- * @size: Size 
+ * @size: Size
  * Return: 1 / 2;
  */
 
@@ -18,7 +18,7 @@ int flags, int width, int precision, int size)
 {
 	int unknow_len = 0;
 	int i;
-	int printed_chars = -1; 
+	int printed_chars = -1;
 
 	fmt_t fmt_types[] = {
 		{'c', print_char}, {'s', print_string}, {'%', print_percent},
