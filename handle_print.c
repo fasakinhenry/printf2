@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * handle_print - output arg according to type
+ * handles_printing - gives output arg according to type
+ * 
  * @fmt: string to print the arguments
  * @list: List of args to be printed
  * @ind: idk
@@ -10,10 +11,11 @@
  * @width: gets the width
  * @precision: get prscn
  * @size: Size
+ * 
  * Return: 1 / 2;
  */
 
-int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
+int handles_printing(const char *fmt, int *ind, va_list list, char buffer[],
 int flags, int width, int precision, int size)
 {
 	int unknow_len = 0;
