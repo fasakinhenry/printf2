@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_precision - get precision to print
+ * get_prcn - get precision to print
  * @format: string parsed as argument
  * @i: comprises ofarguments that should be printed
  * @list: bunch of args
