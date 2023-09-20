@@ -1,7 +1,5 @@
 #include "main.h"
 
-/*** HANDLE WRITE CODE ***/
-
 /**
  * handle_write_char - Prints a string
  * @c: char types.
@@ -42,8 +40,6 @@ int flags, int width, int precision, int size)
 	}
 	return (write(1, &buffer[0], 1));
 }
-
-/*** WRITE A NUMBER ***/
 
 /**
  * write_number - Prints a string
