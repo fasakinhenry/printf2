@@ -2,7 +2,7 @@
 
 /**
  * handles_printing - gives output arg according to type
- * 
+ *
  * @fmt: string to print the arguments
  * @list: List of args to be printed
  * @ind: idk
@@ -11,7 +11,7 @@
  * @width: gets the width
  * @precision: get prscn
  * @size: Size
- * 
+ *
  * Return: 1 / 2;
  */
 

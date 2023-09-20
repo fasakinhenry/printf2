@@ -37,7 +37,7 @@ int output_unsigned(va_list types, char buffer[],
  * @buffer: Buffer arr to handle print
  * @flags: gets active flags
  * @width: get width of it
- * @precision: Precision 
+ * @precision: Precision
  * @size: size specifier of it
  * Return: No of chars that are printed
  */
