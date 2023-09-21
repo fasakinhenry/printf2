@@ -16,40 +16,39 @@ int handle_write_char(char c, char buffer[],
 int flags, int width, int precision, int size)
 {
 	/* char is stored at left and padding at buffer's right */
-	int i = 0;
 	char padd = ' ';
+	int a = 0;
 
 	UNUSED(precision);
 	UNUSED(size);
 	if (flags & F_ZERO)
 		padd = '0';
-	buffer[i++] = c;
-	buffer[i] = '\0';
+	buffer[a++] = c;
+	buffer[a] = '\0';
 	if (width > 1)
 	{
 		buffer[BUFF_SIZE - 1] = '\0';
-		for (i = 0; i < width - 1; i++)
-			buffer[BUFF_SIZE - i - 2] = padd;
+		for (a = 0; a < width - 1; a++)
+			buffer[BUFF_SIZE - a - 2] = padd;
 		if (flags & F_MINUS)
 			return (write(1, &buffer[0], 1) +
-					write(1, &buffer[BUFF_SIZE - i - 1], width -
-						1));
+			write(1, &buffer[BUFF_SIZE - a - 1], width - 1));
 		else
-			return (write(1, &buffer[BUFF_SIZE - i - 1], width - 1) +
-					write(1, &buffer[0], 1));
+			return (write(1, &buffer[BUFF_SIZE - a - 1], width - 1) +
+			write(1, &buffer[0], 1));
 	}
 	return (write(1, &buffer[0], 1));
 }
 
 /**
  * write_number - Prints a string
- * @is_negative: Lista of arguments
+ * @is_negative: Arguments lisiting
  * @ind: char types.
- * @buffer: Buffer array to handle print
- * @flags: Calculates active flags
- * @width: get width.
- * @precision: precision specifier
- * @size: Size specifier
+ * @buffer: print handling buffer array
+ * @flags: Active flags calculator
+ * @width: This gets the width
+ * @precision: This specifies precision
+ * @size: This specifies size
  *
  * Return: Number of chars printed.
  */
@@ -154,7 +153,7 @@ char buffer[], int flags, int width, int precision, int size)
 	UNUSED(is_negative);
 	UNUSED(size);
 	if (precision == 0 && ind == BUFF_SIZE - 2 && buffer[ind] == '0')
-		return (0); /* printf(".0d", 0) no char is printed */
+		return (0);
 	if (precision > 0 && precision < length)
 		padd = ' ';
 	while (precision > length)
@@ -172,12 +171,12 @@ char buffer[], int flags, int width, int precision, int size)
 		if (flags & F_MINUS) /* Asign extra char to left of buffer padding */
 		{
 			return (write(1, &buffer[ind], length) + write(1,
-						&buffer[0], i));
+			&buffer[0], i));
 		}
 		else /* Asign extra char to left of padding [padd>buffer]*/
 		{
 			return (write(1, &buffer[0], i) + write(1, &buffer[ind],
-						length));
+			length));
 		}
 	}
 	return (write(1, &buffer[ind], length));

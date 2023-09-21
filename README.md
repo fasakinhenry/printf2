@@ -1,6 +1,6 @@
 # ALX 0x11. C - printf
 
-## This is a ALX group project made by Fasakin Henry and Segun Ojo
+## This is a ALX group project made by Fasakin Henry and Segun
 
 ### Introduction
 
@@ -12,15 +12,15 @@
 
 ### concepts
 
-- Group Projects - (<b>https://intranet.alxswe.com/concepts/111</b>)
-- Pair Programming - How To(<b>https://intranet.alxswe.com/concepts/121</b>)
-- Flowcharts(<b>https://intranet.alxswe.com/concepts/130</b>)
-- Technical Writing(<b><https://intranet.alxswe.com/concepts/225></b>)
-- Printf function brief - What to know to create your own Printf function(<b>https://intranet.alxswe.com/concepts/100034</b>)
+* Group Projects <https://intranet.alxswe.com/concepts/111>
+* Pair Programming - How To<https://intranet.alxswe.com/concepts/121>
+* Flowcharts <https://intranet.alxswe.com/concepts/130>
+* Technical Writing <https://intranet.alxswe.com/concepts/225>
+* Printf function brief - What to know to create your own Printf function<https://intranet.alxswe.com/concepts/100034>
 
-<img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool*low_level_programming/228/printf.png"></img>
+![Kris and Jul picture](https://s3.amazonaws.com/intranet-projects-files/holbertonschool*low_level_programming/228/printf.png)
 
-<i>^In this picture, Kris and Jul</>
+*^In this picture, Kris and Jul</>*
 
 ## Write your Own Printf function
 
@@ -31,7 +31,8 @@
 * Flowcharts
 
 man or help
-* printf (3)
+
+> printf (3)
 
 ### Requirements
 
@@ -39,7 +40,7 @@ man or help
 
 * Allowed editors: vi, vim, emacs
 * All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-- All your files should end with a new line
+* All your files should end with a new line
 * A README.md file, at the root of the folder of the project is mandatory
 * Your code should use the Betty style. It will be checked using betty*style.pl and betty*doc.pl
 * You are not allowed to use global variables
@@ -52,31 +53,36 @@ man or help
 
 #### GitHub
 
-<b>There should be one project repository per group. The other members do not fork or clone the project to ensure only one of the team has the repository in their github account otherwise you risk scoring 0%</b>
+**There should be one project repository per group. The other members do not fork or clone the project to ensure only one of the team has the repository in their github account otherwise you risk scoring 0%**
 
 ### More Info
 
 #### Authorized functions and macro
 
-<i>write (man 2 write)</i>
-<i>malloc (man 3 malloc)</i>
-<i>free (man 3 free)</i>
-<i>va_start (man 3 va_start)</i>
-<i>va_end (man 3 va_end)</i>
-<i>va_copy (man 3 va_copy)</i>
-<i>va_arg (man 3 va_arg)</i>
+``` c
+write (man 2 write)
+malloc (man 3 malloc)
+free (man 3 free)
+va_start (man 3 va_start)
+va_end (man 3 va_end)
+va_copy (man 3 va_copy)
+va_arg (man 3 va_arg)
+```
 
 #### Compilation
 
 * Your code will be compiled in this way
 
-<code>gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c </code>
+``` c
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c </code>
+```
 
 * As a consequence, be careful not to push any c file containing a main function in the root directory of your project (you could have a test folder containing all your tests files including main functions)
 * Our main files will include your main header file (main.h): #include main.h
 * You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use:
 
-<code>
+``` c
+
 alex@ubuntu:~/c/printf$ cat main.c 
  #include <limits.h>
  #include <stdio.h>
@@ -149,11 +155,17 @@ alex@ubuntu:~/c/printf$ cat main.c
  Unknown:[%r]
  Unknown:[%r]
  alex@ubuntu:~/c/printf$
-</code>
+```
 
 * We strongly encourage you to work all together on a set of tests
 * If the task does not specify what to do with an edge case, do the same as printf
 
+#### Copyright - Plagiarism
+
+* You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
+* You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
+* You are not allowed to publish any content of this project.
+* Any form of plagiarism is strictly forbidden and will result in removal from the program.
 
 ## Tasks
 
@@ -182,9 +194,13 @@ Prototype: int _printf(const char *format, ...);
 Returns: the number of characters printed (excluding the null byte used to end output to strings)
 write output to stdout, the standard output stream
 format is a character string. The format string is composed of zero or more directives. See man 3 printf for more detail. You need to handle the following conversion specifiers:
-* * c
-* * s
-* * %
+
+```  c
+* c
+* s
+* %
+```
+
 You don’t have to reproduce the buffer handling of the C library printf function
 You don’t have to handle the flag characters
 You don’t have to handle field width
@@ -208,7 +224,7 @@ Handle the following custom conversion specifiers:
 
 * b: the unsigned int argument is converted to binary
 
-<code>
+``` c
 alex@ubuntu:~/c/printf$ cat main.c
 #include "main.h"
 
@@ -226,20 +242,20 @@ alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 main.c
 alex@ubuntu:~/c/printf$ ./a.out
 1100010
 alex@ubuntu:~/c/printf$
-</code>
+```
 
 ### Task 3
 
 Handle the following conversion specifiers:
 
-- u
-- o
-- x
-- X
-- You don’t have to handle the flag characters
-- You don’t have to handle field width
-- You don’t have to handle precision
-- You don’t have to handle the length modifiers
+* u
+* o
+* x
+* X
+* You don’t have to handle the flag characters
+* You don’t have to handle field width
+* You don’t have to handle precision
+* You don’t have to handle the length modifiers
 
 ### Task 4
 
@@ -249,33 +265,33 @@ Use a local buffer of 1024 chars in order to call write as little as possible.
 
 Handle the following custom conversion specifier:
 
-- S : prints the string.
-- Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
+* S : prints the string.
+* Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
 
 ### Task 6
 
 Handle the following conversion specifier: p.
 
-- You don’t have to handle the flag characters
-- You don’t have to handle field width
-- You don’t have to handle precision
-- You don’t have to handle the length modifiers
+* You don’t have to handle the flag characters
+* You don’t have to handle field width
+* You don’t have to handle precision
+* You don’t have to handle the length modifiers
 
 ### Task 7
 
 Handle the following flag characters for non-custom conversion specifiers:
 
-- +
-- space
-- "#"
+* \+
+* space
+* "#"
 
 ### Task 8
 
 Handle the following length modifiers for non-custom conversion specifiers:
 
-- l
-- h
-- Conversion specifiers to handle: d, i, u, o, x, X
+* l
+* h
+* Conversion specifiers to handle: d, i, u, o, x, X
 
 ### Task 9
 
@@ -297,13 +313,13 @@ Handle the - flag character for non-custom conversion specifiers.
 
 Handle the following custom conversion specifier:
 
-- r : prints the reversed string
+* r : prints the reversed string
 
 ### Task 14
 
 Handle the following custom conversion specifier:
 
-- R: prints the rot13'ed string
+* R: prints the rot13'ed string
 
 ### Task 15
 
