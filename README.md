@@ -19,6 +19,7 @@
 * Printf function brief - What to know to create your own Printf function<https://intranet.alxswe.com/concepts/100034>
 
 ![Kris and Jul picture](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/228/printf.png)
+
 *^In this picture, Kris and Jul</>*
 
 ## Write your Own Printf function
