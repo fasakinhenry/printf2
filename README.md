@@ -1,4 +1,4 @@
-# ALX 0x11. C - printf
+# ALX 0x11. C - printf (ALX printf)
 
 ## This is a ALX group project made by Fasakin Henry and Segun
 
