@@ -2,7 +2,7 @@
 
 /**
  * handles_printing - gives output arg according to type
- * 
+ *
  * @fmt: string to print the arguments
  * @list: List of args to be printed
  * @ind: idk
@@ -11,7 +11,7 @@
  * @width: gets the width
  * @precision: get prscn
  * @size: Size
- * 
+ *
  * Return: 1 / 2;
  */
 
@@ -23,13 +23,13 @@ int flags, int width, int precision, int size)
 	int printed_chars = -1;
 
 	fmt_t fmt_types[] = {
-		{'c', print_char}, {'s', print_string}, {'%', print_percent},
-		{'i', print_int}, {'d', print_int}, {'b', print_binary},
-		{'u', print_unsigned}, {'o', print_octal}, {'x',
-								   print_hexadecimal},
-		{'X', print_hexa_upper}, {'p', print_pointer}, {'S',
-								       print_non_printable},
-		{'r', print_reverse}, {'R', print_rot13string}, {'\0', NULL}
+		{'c', output_char}, {'s', output_string}, {'%', output_percent},
+		{'i', output_int}, {'d', output_int}, {'b', output_binary},
+		{'u', output_unsigned}, {'o', output_octal}, {'x',
+								   output_hexadecimal},
+		{'X', output_hexa_upper}, {'p', output_pointer}, {'S',
+								       output_non_printable},
+		{'r', output_reverse}, {'R', output_rot13string}, {'\0', NULL}
 	};
 	for (i = 0; fmt_types[i].fmt != '\0'; i++)
 		if (fmt[*ind] == fmt_types[i].fmt)
