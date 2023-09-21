@@ -38,7 +38,7 @@ int output_string(va_list types, char buffer[],
 	UNUSED(buffer);
 	UNUSED(width);
 	UNUSED(flags);
-	
+
 	if (strg == NULL)
 	{
 		strg = "(null)";
@@ -77,7 +77,7 @@ int output_string(va_list types, char buffer[],
  * @width: gets width.
  * @precision: Precision
  * @size: Size
- * 
+ *
  * Return: no of chars printed
  */
 int output_percent(va_list types, char buffer[],
@@ -99,7 +99,7 @@ int output_percent(va_list types, char buffer[],
  * @width: get width.
  * @precision: Precision
  * @size: Size
- * 
+ *
  * Return: Number of chars printed
  */
 int output_int(va_list types, char buffer[],
@@ -140,7 +140,7 @@ int flags, int width, int precision, int size)
  * @width: This gets the width
  * @precision: This specifies precision
  * @size: This specifies size
- * 
+ *
  * Return: Numbers of char printed.
  */
 
