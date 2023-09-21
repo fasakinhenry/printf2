@@ -19,14 +19,13 @@
 * Printf function brief - What to know to create your own Printf function<https://intranet.alxswe.com/concepts/100034>
 
 ![Kris and Jul picture](https://s3.amazonaws.com/intranet-projects-files/holbertonschool*low_level_programming/228/printf.png)
-
 *^In this picture, Kris and Jul</>*
 
 ## Write your Own Printf function
 
 ### Resources
 
-* Secrets of printf (https://intranet.alxswe.com/rltoken/7Vw7aUWgwC7JYUrqI4bh4Q)
+* Secrets of printf <https://intranet.alxswe.com/rltoken/7Vw7aUWgwC7JYUrqI4bh4Q>
 * Group Projects concept page (Don’t forget to read this)
 * Flowcharts
 
@@ -53,7 +52,7 @@ man or help
 
 #### GitHub
 
-**There should be one project repository per group. The other members do not fork or clone the project to ensure only one of the team has the repository in their github account otherwise you risk scoring 0%**
+> There should be one project repository per group. The other members do not fork or clone the project to ensure only one of the team has the repository in their github account otherwise you risk scoring 0%
 
 ### More Info
 
