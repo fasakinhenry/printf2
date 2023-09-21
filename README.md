@@ -20,7 +20,7 @@
 
 ![Kris and Jul picture](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/228/printf.png)
 
-*^In this picture, Kris and Jul</>*
+^In this picture, Kris and Jul</>
 
 ## Write your Own Printf function
 
